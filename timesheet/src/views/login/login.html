@@ -1,0 +1,20 @@
+
+<div ng-app="loginApp">
+  <div class="col-md-4 col-sm-8 col-xs-12 col-md-offset-4 text-center" ng-controller="LoginCtrl" >
+	
+	<div class="alert alert-info" role="alert"><h3> Sign In </h3>
+		<div class="form-group">
+			<label for="email">Username</label>
+			<input type="text" class="form-control" id="username" ng-model="login.username" placeholder="Enter username" value="test"/>
+			<span class="text-danger" ng-show="loginUsername">{{ loginUsername }}</span>
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" id="passwd" ng-model="login.passwd" placeholder="Password" />
+			<span class="text-danger" ng-show="loginPassword">{{ loginPassword }}</span>
+		</div>
+		<input type="button" class="btn btn-primary" ng-click="submit()" value="Login">
+		<p>Username / Password can be any thing</p>
+		</div>
+  </div>
+</div>
